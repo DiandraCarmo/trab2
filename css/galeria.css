@@ -1,0 +1,373 @@
+/* **** Reset ****************** 
+   (colocar em todas p�ginas de todos projetos)
+   **************************** */
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+  }
+  *,
+  *:before,
+  *:after {
+	box-sizing: inherit;
+  }
+  
+
+ /* **** Especifica��es do Projeto ****************** 
+   (colocar em todas p�ginas do projeto)
+   **************************** */
+ 
+ :root {
+  --cor-destaque:#83D2FC;
+  --cor-principal:#C7EBFF;
+  --cor-contraste:hsl(0, 0%, 0%);
+  /* font-size:16px; */
+  @media (min-width: 700px) {
+  }
+}
+
+/* ********* Especifica��es da p�gina */
+
+ /** Telas grandes**/
+
+ body{
+  background-color: var(--cor-principal);
+  color:var(--cor-contraste);
+  margin: 0px;
+} 
+
+ .container {
+    display: grid;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+ /* este seletor seleciona todos filhos diretos do container*/
+.container > * {
+  padding:10px; 
+  border: 1px solid var(--cor-destaque); 
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+header {
+  grid-area: header;
+  display: flex;
+  font-size: 10px;
+  background-color: var(--cor-destaque);
+  height: 120px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.design{
+  align-self: center;
+  height: 100px;
+}
+.nome{
+  align-self: flex-end;
+}
+.gato{
+    align-self: flex-end;
+    height: 50px;
+    border: 2px solid #C8F1E9;
+    border-radius: 80%;
+}
+.logo{
+    height: 100%;
+}
+.perfil{
+  display: flex;
+}
+
+ nav {
+  grid-area: nav;
+  font-size: 1.5rem;
+  background-color: #C8F1E9;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--cor-principal);
+  width: 100%;
+}
+.pricipal{
+  padding: 40px;
+}
+
+.pricipal > img{
+  height: 30vw;
+  width: 100%;
+}
+.img{
+  display: grid; 
+  grid-template-columns: repeat(3, 25%);
+  justify-content: space-between;
+  padding: 0px;
+}
+.img figure{
+  border: solid var(--cor-destaque);
+  width: 20vw;
+}
+.img figcaption{
+  text-shadow: 1px 1px #196285; 
+  font-weight: bold;
+  font-size: 2.5vw;
+  font-family: inria-serif;
+}
+.img img{
+  width: 100%;
+}
+figure > button{
+  width: 100%;
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.formulario img{
+  height: 30vw;
+}
+.formulario input{
+  border-radius: 10px;
+  height: 30px;
+}
+form{
+  border: 2px solid #83D2FC;
+  width: auto;
+  padding: 15px;
+}
+.extra{
+  display: grid; 
+  grid-template-columns: repeat(3, 25%);
+  justify-content: space-between;
+  padding: 0px;
+}
+.extra figure{
+  border: solid var(--cor-destaque);
+  width: 20vw;
+}
+.extra figcaption{
+  text-shadow: 1px 1px #196285; 
+  font-weight: bold;
+  font-size: 2.5vw;
+  font-family: inria-serif;
+}
+.extra img{
+  width: 100%;
+}
+footer{
+  grid-area: footer;
+  background-color: var(--cor-destaque);
+  width: 100%;
+}
+.grid-footer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+.redes img{
+  height: 3vw;
+}
+.redes{
+  grid-column: 2;
+  grid-row: 2;
+}
+.email{
+  grid-column: 1;
+}
+.termos{
+  grid-column: 1;
+  grid-row: 4;
+  color: blue;
+}
+
+/* telas intermediarias */
+@media (max-width: 800px) {
+  header {
+  grid-area: header;
+  display: flex;
+  background-color: var(--cor-destaque);
+  height: 120px;
+}
+.design{
+  align-self: center;
+  margin-left: 13vw;
+  height: 100px;
+}
+.nome{
+  display: none;
+}
+.gato{
+    align-self: flex-end;
+    margin-left: 10vw;
+    height: 50px;
+    border: 2px solid #C8F1E9;
+    border-radius: 80%;
+}
+.logo{
+    height: 100%;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--cor-principal);
+}
+.img{
+  display: grid; 
+  grid-template-columns: repeat(3, 3vw);
+  width: 80%;
+}
+.img figure{
+  border: solid var(--cor-destaque);
+  width: 20.5vw;
+}
+.img figcaption{
+  text-shadow: 1px 1px #196285; 
+  font-weight: bold;
+  font-size: 2.5vw;
+  font-family: inria-serif;
+}
+.img img{
+  width: 20vw;
+}
+footer {
+  grid-area: footer;
+  background-color: var(--cor-destaque);
+}
+.grid-footer{
+  display: flex;
+  flex-direction: column;
+}
+.redes{
+  height: 3vw;
+}
+.termos{
+  margin-top: 60px;
+}
+}
+
+/* telas pequenas */
+@media (max-width: 500px) {
+  header {
+  grid-area: header;
+  display: flex;
+  font-size: 10px;
+  background-color: var(--cor-destaque);
+  width: 100%;
+  height: 100px;
+  justify-content: flex-start;
+  }
+.design{
+  align-self: center;
+  height: 70px;
+  margin-left: 2vw;
+  padding: 0;
+}
+.nome{
+  display: none;
+}
+.gato{
+    align-self: flex-end;
+    height: 35px;
+    border: 2px solid #C8F1E9;
+    border-radius: 80%;
+    margin-left: 3vw;
+}
+.logo{
+    height: 100%;
+}
+
+nav {
+  grid-area: nav;
+  font-size: 1.1rem;
+  background-color: #C8F1E9;
+  width: 100%;
+}
+.flexcontainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pesquisa{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.pesquisa >img{
+  margin-left: 0%;
+  width: 150px;
+}
+.inicio{
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--cor-principal);
+  width: 100%;
+}
+.img{
+  display: grid; 
+  grid-template-columns: repeat(2, 30%);
+  justify-content: space-evenly;
+  padding: 0px;
+}
+.img figure{
+  border: solid var(--cor-destaque);
+  width: 25vw;
+}
+.img figcaption{
+  text-shadow: 1px 1px #196285; 
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: inria-serif;
+}
+.img img{
+  width: 100%;
+}
+.extra{
+  display: grid; 
+  grid-template-columns: repeat(2, 30%);
+  justify-content: space-evenly;
+  padding: 0px;
+}
+.extra figure{
+  border: solid var(--cor-destaque);
+  width: 25vw;
+}
+.extra figcaption{
+  text-shadow: 1px 1px #196285; 
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: inria-serif;
+}
+.extra img{
+  width: 100%;
+}
+footer {
+  grid-area: footer;
+  background-color: var(--cor-destaque);
+  width: 100%;
+}
+.grid-footer{
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+.redes{
+  height: 3vw;
+}
+.termos{
+  margin-top: 60px;
+}
+}
