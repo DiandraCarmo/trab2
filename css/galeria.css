@@ -114,7 +114,6 @@ main {
 }
 .img figure{
   border: solid var(--cor-destaque);
-  width: 20vw;
 }
 .img figcaption{
   text-shadow: 1px 1px #196285; 
@@ -125,8 +124,11 @@ main {
 .img img{
   width: 100%;
 }
-figure > button{
-  width: 100%;
+.modal-body img{
+  height: 30vw;
+  width: 25vw;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 .formulario{
   display: flex;
@@ -322,6 +324,7 @@ main {
   justify-content: space-evenly;
   padding: 0px;
 }
+
 .img figure{
   border: solid var(--cor-destaque);
   width: 25vw;
